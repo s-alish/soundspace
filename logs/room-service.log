@@ -1,0 +1,1591 @@
+2025-05-19 12:57:16 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2025-05-19 12:57:16 INFO  c.s.r.RoomServiceApplication - Starting RoomServiceApplication using Java 17.0.12 with PID 13000 (D:\6 semester\Java\backend\soundspace\room-service\build\classes\java\main started by salis in D:\6 semester\Java\backend\soundspace)
+2025-05-19 12:57:16 DEBUG c.s.r.RoomServiceApplication - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-05-19 12:57:16 INFO  c.s.r.RoomServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-05-19 12:57:17 DEBUG o.s.c.o.FeignClientsRegistrar$1 - Identified candidate component class: file [D:\6 semester\Java\backend\soundspace\room-service\build\classes\java\main\com\soundspace\roomservice\infrastructure\client\PlaylistServiceClient.class]
+2025-05-19 12:57:17 DEBUG o.s.c.o.FeignClientsRegistrar$1 - Identified candidate component class: file [D:\6 semester\Java\backend\soundspace\room-service\build\classes\java\main\com\soundspace\roomservice\infrastructure\client\UserServiceClient.class]
+2025-05-19 12:57:18 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-19 12:57:18 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 192 ms. Found 4 JPA repository interfaces.
+2025-05-19 12:57:18 INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=bd8daff9-a199-3a0a-8b28-9198a6db9b6e
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$750/0x000001d9ce4ce570] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'stringOrNumberMigrationVersionConverter' of type [org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$StringOrNumberToMigrationVersionConverter] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 WARN  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-05-19 12:57:19 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-05-19 12:57:19 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2025-05-19 12:57:19 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-19 12:57:19 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+2025-05-19 12:57:19 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-19 12:57:19 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2514 ms
+2025-05-19 12:57:19 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2025-05-19 12:57:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-19 12:57:19 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60f662bd
+2025-05-19 12:57:19 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-19 12:57:19 INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 9.22.3 by Redgate
+2025-05-19 12:57:19 INFO  o.f.c.i.license.VersionPrinter - See release notes here: https://rd.gt/416ObMi
+2025-05-19 12:57:19 INFO  o.f.c.i.license.VersionPrinter - 
+2025-05-19 12:57:19 INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/soundspace_room (PostgreSQL 17.2)
+2025-05-19 12:57:19 WARN  o.f.c.i.database.base.Database - Flyway upgrade recommended: PostgreSQL 17.2 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 15.
+2025-05-19 12:57:19 INFO  o.f.core.internal.command.DbValidate - Successfully validated 0 migrations (execution time 00:00.019s)
+2025-05-19 12:57:19 WARN  o.f.core.internal.command.DbValidate - No migrations found. Are your locations set up correctly?
+2025-05-19 12:57:20 INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": << Empty Schema >>
+2025-05-19 12:57:20 INFO  o.f.core.internal.command.DbMigrate - Schema "public" is up to date. No migration necessary.
+2025-05-19 12:57:20 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-19 12:57:20 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-05-19 12:57:20 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-19 12:57:20 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-19 12:57:20 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-19 12:57:21 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-19 12:57:21 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 12:57:22 DEBUG o.s.c.o.FeignClientFactoryBean - Creating a FeignClientFactoryBean.
+2025-05-19 12:57:22 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-19 12:57:22 INFO  o.s.c.o.FeignClientFactoryBean - For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+2025-05-19 12:57:22 DEBUG o.s.c.o.FeignClientFactoryBean - Creating a FeignClientFactoryBean.
+2025-05-19 12:57:22 INFO  o.s.c.o.FeignClientFactoryBean - For 'playlist-service' URL not provided. Will try picking an instance via load-balancing.
+2025-05-19 12:57:22 WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration - 
+
+Using generated security password: f1e5fd5f-ab69-4903-9498-751a08e581c3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-05-19 12:57:22 INFO  c.s.r.i.config.SecurityConfig - Configuring Spring Security filter chain
+2025-05-19 12:57:22 INFO  c.s.r.i.config.SecurityConfig - Configuring CORS
+2025-05-19 12:57:22 DEBUG o.s.w.s.s.s.WebSocketHandlerMapping - Patterns [/ws/**] in 'stompWebSocketHandlerMapping'
+2025-05-19 12:57:23 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2025-05-19 12:57:23 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-05-19 12:57:23 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37a74cf4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40af3dd8, org.springframework.security.web.context.SecurityContextHolderFilter@70b037ac, org.springframework.security.web.header.HeaderWriterFilter@738da6f2, org.springframework.web.filter.CorsFilter@745c25ed, org.springframework.security.web.authentication.logout.LogoutFilter@2da7ef3e, com.soundspace.roomservice.infrastructure.component.JwtAuthenticationFilter@4fb1bffd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e09c3b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64f34c91, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@427c9a13, org.springframework.security.web.session.SessionManagementFilter@30fba306, org.springframework.security.web.access.ExceptionTranslationFilter@1d8230cd, org.springframework.security.web.access.intercept.AuthorizationFilter@1fbd0850]
+2025-05-19 12:57:23 DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	c.s.r.a.c.RoomController:
+	
+2025-05-19 12:57:23 DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	c.s.r.a.c.WebSocketController:
+	{[MESSAGE],[/rooms/{id}/state]}: updateState(Long,PlaybackState)
+	{[MESSAGE],[/rooms/{id}/votes]}: updateVote(Long,Vote)
+2025-05-19 12:57:23 DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	
+2025-05-19 12:57:23 DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	o.s.w.a.OpenApiWebMvcResource:
+	
+2025-05-19 12:57:23 DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	
+2025-05-19 12:57:23 DEBUG o.s.w.s.m.WebSocketAnnotationMethodMessageHandler - 
+	o.s.w.u.SwaggerConfigResource:
+	
+2025-05-19 12:57:23 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-05-19 12:57:23 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-05-19 12:57:23 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2025-05-19 12:57:23 WARN  o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-05-19 12:57:23 INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2025-05-19 12:57:23 INFO  c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2025-05-19 12:57:24 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Application is null : false
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2025-05-19 12:57:24 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/
+2025-05-19 12:57:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:57:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:57:24 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - The response status is 200
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2025-05-19 12:57:24 INFO  c.n.discovery.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1747641444581 with initial instances count: 1
+2025-05-19 12:57:24 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Registering application ROOM-SERVICE with eureka with status UP
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1747641444593, current=UP, previous=STARTING]
+2025-05-19 12:57:24 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082: registering service...
+2025-05-19 12:57:24 DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/ROOM-SERVICE
+2025-05-19 12:57:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:57:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2025-05-19 12:57:24 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8082
+2025-05-19 12:57:24 DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = LAPTOP-NSKOCGRU:room-service:8082, appName = ROOM-SERVICE, hostName = LAPTOP-NSKOCGRU, status = UP, ipAddr = 192.168.0.11, port = 8082, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@14d44e72] as "application/json"
+2025-05-19 12:57:24 DEBUG o.s.web.client.RestTemplate - Response 204 NO_CONTENT
+2025-05-19 12:57:24 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082 - registration status: 204
+2025-05-19 12:57:24 DEBUG org.springframework.web.SimpLogging - clientOutboundChannel added SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2025-05-19 12:57:24 DEBUG org.springframework.web.SimpLogging - clientInboundChannel added WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2025-05-19 12:57:24 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+2025-05-19 12:57:24 DEBUG org.springframework.web.SimpLogging - clientInboundChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@f2bec99]
+2025-05-19 12:57:24 DEBUG org.springframework.web.SimpLogging - brokerChannel added SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@f2bec99]
+2025-05-19 12:57:24 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@f2bec99]]
+2025-05-19 12:57:24 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+2025-05-19 12:57:24 DEBUG org.springframework.web.SimpLogging - clientInboundChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-05-19 12:57:24 DEBUG org.springframework.web.SimpLogging - brokerChannel added UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-05-19 12:57:24 INFO  c.s.r.RoomServiceApplication - Started RoomServiceApplication in 8.648 seconds (process running for 9.394)
+2025-05-19 12:57:54 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 12:57:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:57:54 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 12:57:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:57:54 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 12:57:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:57:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:58:23 INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 0]
+2025-05-19 12:58:24 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 12:58:24 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 12:58:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:58:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:58:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:58:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:58:24 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 12:58:30 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-19 12:58:30 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@52d202f0
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7cba8293
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-05-19 12:58:30 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.html
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/index.html
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/index.html
+2025-05-19 12:58:30 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-19 12:58:30 WARN  o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/swagger-ui/index.html' (previous null). Performing MatchableHandlerMapping lookup. This is logged once only at WARN level, and every time at TRACE.
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.html
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/index.html
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/index.html
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.html", parameters={}
+2025-05-19 12:58:30 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui.css
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/swagger-ui.css
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/swagger-ui.css
+2025-05-19 12:58:30 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/index.css
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/index.css
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/index.css
+2025-05-19 12:58:30 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui.css
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/swagger-ui.css
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/swagger-ui.css
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui.css", parameters={}
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/index.css
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/index.css
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/index.css
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/index.css", parameters={}
+2025-05-19 12:58:30 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-05-19 12:58:30 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-bundle.js
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/swagger-ui-bundle.js
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/swagger-ui-bundle.js
+2025-05-19 12:58:30 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-bundle.js
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/swagger-ui-bundle.js
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/swagger-ui-bundle.js
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-initializer.js
+2025-05-19 12:58:30 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/swagger-initializer.js
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/swagger-initializer.js
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-19 12:58:30 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-19 12:58:30 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-initializer.js
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/swagger-initializer.js
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/swagger-initializer.js
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-initializer.js", parameters={}
+2025-05-19 12:58:30 DEBUG o.s.security.web.FilterChainProxy - Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-19 12:58:30 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-19 12:58:30 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-05-19 12:58:30 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /swagger-ui/swagger-ui-standalone-preset.js
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2025-05-19 12:58:30 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 12:58:30 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 12:58:31 DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs/swagger-config
+2025-05-19 12:58:31 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /v3/api-docs/swagger-config
+2025-05-19 12:58:31 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /v3/api-docs/swagger-config
+2025-05-19 12:58:31 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-19 12:58:31 DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs/swagger-config
+2025-05-19 12:58:31 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /v3/api-docs/swagger-config
+2025-05-19 12:58:31 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /v3/api-docs/swagger-config
+2025-05-19 12:58:31 DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs/swagger-config", parameters={}
+2025-05-19 12:58:31 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2025-05-19 12:58:31 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+2025-05-19 12:58:31 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8082/swagger-ui/oauth2-re (truncated)...]
+2025-05-19 12:58:31 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 12:58:31 DEBUG o.s.security.web.FilterChainProxy - Securing GET /v3/api-docs
+2025-05-19 12:58:31 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /v3/api-docs
+2025-05-19 12:58:31 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /v3/api-docs
+2025-05-19 12:58:31 DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+2025-05-19 12:58:31 DEBUG o.s.security.web.FilterChainProxy - Secured GET /v3/api-docs
+2025-05-19 12:58:31 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /v3/api-docs
+2025-05-19 12:58:31 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Skipping JWT filter for path: /v3/api-docs
+2025-05-19 12:58:31 DEBUG o.s.web.servlet.DispatcherServlet - GET "/v3/api-docs", parameters={}
+2025-05-19 12:58:31 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2025-05-19 12:58:31 INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 335 ms
+2025-05-19 12:58:31 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json]
+2025-05-19 12:58:31 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2025-05-19 12:58:31 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 12:58:54 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 12:58:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:58:54 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 12:58:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:58:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:58:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:58:54 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 12:59:24 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 12:59:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:59:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:59:24 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 12:59:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:59:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:59:24 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 12:59:47 DEBUG o.s.security.web.FilterChainProxy - Securing GET /rooms/4
+2025-05-19 12:59:47 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4
+2025-05-19 12:59:47 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 12:59:47 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 12:59:47 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 12:59:47 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 12:59:47 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: john.doe@email.com
+2025-05-19 12:59:47 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 12:59:47 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 12:59:47 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: john.doe@email.com
+2025-05-19 12:59:47 DEBUG o.s.security.web.FilterChainProxy - Secured GET /rooms/4
+2025-05-19 12:59:47 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4
+2025-05-19 12:59:47 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 12:59:47 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 12:59:47 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 12:59:47 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 12:59:47 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: john.doe@email.com
+2025-05-19 12:59:47 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 12:59:47 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 12:59:47 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: john.doe@email.com
+2025-05-19 12:59:47 DEBUG o.s.web.servlet.DispatcherServlet - GET "/rooms/4", parameters={}
+2025-05-19 12:59:47 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.soundspace.roomservice.api.controller.RoomController#getRoom(Long)
+2025-05-19 12:59:47 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-19 12:59:47 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.soundspace.roomservice.domain.model.room.Room@23b60509]
+2025-05-19 12:59:47 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 12:59:54 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 12:59:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:59:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:59:54 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 12:59:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 12:59:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 12:59:54 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:00:00 DEBUG o.s.security.web.FilterChainProxy - Securing GET /rooms/4/playlist
+2025-05-19 13:00:00 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/playlist
+2025-05-19 13:00:00 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:00 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: john.doe@email.com
+2025-05-19 13:00:00 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:00 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: john.doe@email.com
+2025-05-19 13:00:00 DEBUG o.s.security.web.FilterChainProxy - Secured GET /rooms/4/playlist
+2025-05-19 13:00:00 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/playlist
+2025-05-19 13:00:00 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:00 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: john.doe@email.com
+2025-05-19 13:00:00 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:00 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: john.doe@email.com
+2025-05-19 13:00:00 DEBUG o.s.web.servlet.DispatcherServlet - GET "/rooms/4/playlist", parameters={}
+2025-05-19 13:00:00 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.soundspace.roomservice.api.controller.RoomController#getPlaylist(Long, String)
+2025-05-19 13:00:00 INFO  c.s.r.api.controller.RoomController - Received GET /rooms/4/playlist request
+2025-05-19 13:00:00 DEBUG c.s.r.api.controller.RoomController - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:00 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:00 INFO  c.s.r.api.controller.RoomController - Extracted email from token: john.doe@email.com
+2025-05-19 13:00:00 DEBUG c.s.r.api.controller.RoomController - Fetching user by email: john.doe@email.com
+2025-05-19 13:00:00 DEBUG feign.template.Template - Explicit slash decoding specified, decoding all slashes in uri
+2025-05-19 13:00:01 DEBUG o.s.w.c.HttpMessageConverterExtractor - Reading to [com.soundspace.roomservice.infrastructure.client.UserServiceClient$UserDTO]
+2025-05-19 13:00:01 INFO  c.s.r.api.controller.RoomController - Fetched user: id=1, email=john.doe@email.com, name=John
+2025-05-19 13:00:01 INFO  c.s.r.api.controller.RoomController - Fetched userId: 1 for email: john.doe@email.com
+2025-05-19 13:00:01 DEBUG feign.template.Template - Explicit slash decoding specified, decoding all slashes in uri
+2025-05-19 13:00:01 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.soundspace.roomservice.domain.exception.GlobalExceptionHandler#handleGeneralException(Exception)
+2025-05-19 13:00:01 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-19 13:00:01 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.soundspace.roomservice.domain.exception.GlobalExceptionHandler$ErrorResponse@b96a2]
+2025-05-19 13:00:01 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [feign.FeignException$Forbidden: [403] during [GET] to [http://playlist-service/rooms/4/tracks] [PlaylistServiceClient#getTracksByRoomId(Long)]: []]
+2025-05-19 13:00:01 DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2025-05-19 13:00:11 DEBUG o.s.security.web.FilterChainProxy - Securing GET /rooms/4/users
+2025-05-19 13:00:11 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/users
+2025-05-19 13:00:11 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:11 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:11 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:11 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:11 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: john.doe@email.com
+2025-05-19 13:00:11 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:11 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:11 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: john.doe@email.com
+2025-05-19 13:00:11 DEBUG o.s.security.web.FilterChainProxy - Secured GET /rooms/4/users
+2025-05-19 13:00:11 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/users
+2025-05-19 13:00:11 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:11 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:11 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:11 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:11 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: john.doe@email.com
+2025-05-19 13:00:11 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:11 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:11 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: john.doe@email.com
+2025-05-19 13:00:11 DEBUG o.s.web.servlet.DispatcherServlet - GET "/rooms/4/users", parameters={}
+2025-05-19 13:00:11 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.soundspace.roomservice.api.controller.RoomController#getUsersInRoom(Long)
+2025-05-19 13:00:12 DEBUG feign.template.Template - Explicit slash decoding specified, decoding all slashes in uri
+2025-05-19 13:00:12 DEBUG o.s.w.c.HttpMessageConverterExtractor - Reading to [com.soundspace.roomservice.infrastructure.client.UserServiceClient$UserDTO]
+2025-05-19 13:00:12 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-19 13:00:12 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[UserServiceClient.UserDTO(id=null, email=john.doe@email.com, name=John)]]
+2025-05-19 13:00:12 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 13:00:24 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:00:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:00:24 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:00:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:00:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:00:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:00:24 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:00:50 DEBUG o.s.security.web.FilterChainProxy - Securing POST /rooms/4/join
+2025-05-19 13:00:50 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/join
+2025-05-19 13:00:50 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:50 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:50 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:50 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:50 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: john.doe@email.com
+2025-05-19 13:00:50 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:50 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:50 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: john.doe@email.com
+2025-05-19 13:00:50 DEBUG o.s.security.web.FilterChainProxy - Secured POST /rooms/4/join
+2025-05-19 13:00:50 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/join
+2025-05-19 13:00:50 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:50 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:50 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:50 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:50 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: john.doe@email.com
+2025-05-19 13:00:50 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:50 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:50 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: john.doe@email.com
+2025-05-19 13:00:50 DEBUG o.s.web.servlet.DispatcherServlet - POST "/rooms/4/join", parameters={}
+2025-05-19 13:00:50 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.soundspace.roomservice.api.controller.RoomController#joinRoom(Long, String)
+2025-05-19 13:00:50 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqb2huLmRvZUBlbWFpbC5jb20iLCJpYXQiOjE3NDc2NDE1NjYsImV4cCI6MTc0NzcyNzk2Nn0.W5wLD48TGMnuzPsYHwPCenDaJx3NCN3At_Aw-SjlrctYmYVRmtSgvSTrWd-Xb0Wv7gu5mpubaAJGaX9H9HbPZQ
+2025-05-19 13:00:50 INFO  c.s.r.i.component.JwtUtil - Extracted email: john.doe@email.com
+2025-05-19 13:00:50 DEBUG c.s.r.api.controller.RoomController - Fetching user by email: john.doe@email.com
+2025-05-19 13:00:50 DEBUG feign.template.Template - Explicit slash decoding specified, decoding all slashes in uri
+2025-05-19 13:00:50 DEBUG o.s.w.c.HttpMessageConverterExtractor - Reading to [com.soundspace.roomservice.infrastructure.client.UserServiceClient$UserDTO]
+2025-05-19 13:00:50 INFO  c.s.r.api.controller.RoomController - Fetched user: id=1, email=john.doe@email.com, name=John
+2025-05-19 13:00:50 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.soundspace.roomservice.domain.exception.GlobalExceptionHandler#handleGeneralException(Exception)
+2025-05-19 13:00:50 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-19 13:00:50 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.soundspace.roomservice.domain.exception.GlobalExceptionHandler$ErrorResponse@d19416f]
+2025-05-19 13:00:50 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.RuntimeException: User already in room]
+2025-05-19 13:00:50 DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+2025-05-19 13:00:54 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:00:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:00:54 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:00:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:00:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:00:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:00:54 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:00:58 DEBUG o.s.security.web.FilterChainProxy - Securing POST /rooms/4/join
+2025-05-19 13:00:58 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/join
+2025-05-19 13:00:58 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:00:58 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:00:58 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:00:58 INFO  c.s.r.i.component.JwtUtil - Extracted email: example@email.com
+2025-05-19 13:00:58 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: example@email.com
+2025-05-19 13:00:58 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:00:58 INFO  c.s.r.i.component.JwtUtil - Extracted email: example@email.com
+2025-05-19 13:00:58 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: example@email.com
+2025-05-19 13:00:58 DEBUG o.s.security.web.FilterChainProxy - Secured POST /rooms/4/join
+2025-05-19 13:00:58 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/join
+2025-05-19 13:00:58 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:00:58 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:00:58 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:00:58 INFO  c.s.r.i.component.JwtUtil - Extracted email: example@email.com
+2025-05-19 13:00:58 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: example@email.com
+2025-05-19 13:00:58 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:00:58 INFO  c.s.r.i.component.JwtUtil - Extracted email: example@email.com
+2025-05-19 13:00:58 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: example@email.com
+2025-05-19 13:00:58 DEBUG o.s.web.servlet.DispatcherServlet - POST "/rooms/4/join", parameters={}
+2025-05-19 13:00:58 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.soundspace.roomservice.api.controller.RoomController#joinRoom(Long, String)
+2025-05-19 13:00:58 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:00:58 INFO  c.s.r.i.component.JwtUtil - Extracted email: example@email.com
+2025-05-19 13:00:58 DEBUG c.s.r.api.controller.RoomController - Fetching user by email: example@email.com
+2025-05-19 13:00:58 DEBUG feign.template.Template - Explicit slash decoding specified, decoding all slashes in uri
+2025-05-19 13:00:58 DEBUG o.s.w.c.HttpMessageConverterExtractor - Reading to [com.soundspace.roomservice.infrastructure.client.UserServiceClient$UserDTO]
+2025-05-19 13:00:58 INFO  c.s.r.api.controller.RoomController - Fetched user: id=2, email=example@email.com, name=Alex
+2025-05-19 13:00:58 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-19 13:00:58 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+2025-05-19 13:00:58 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 13:01:09 DEBUG o.s.security.web.FilterChainProxy - Securing GET /rooms/4/users
+2025-05-19 13:01:09 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/users
+2025-05-19 13:01:09 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:01:09 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:01:09 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:01:09 INFO  c.s.r.i.component.JwtUtil - Extracted email: example@email.com
+2025-05-19 13:01:09 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: example@email.com
+2025-05-19 13:01:09 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:01:09 INFO  c.s.r.i.component.JwtUtil - Extracted email: example@email.com
+2025-05-19 13:01:09 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: example@email.com
+2025-05-19 13:01:09 DEBUG o.s.security.web.FilterChainProxy - Secured GET /rooms/4/users
+2025-05-19 13:01:09 INFO  c.s.r.i.c.JwtAuthenticationFilter - Processing request: /rooms/4/users
+2025-05-19 13:01:09 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Authorization header: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:01:09 DEBUG c.s.r.i.c.JwtAuthenticationFilter - Processing token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:01:09 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:01:09 INFO  c.s.r.i.component.JwtUtil - Extracted email: example@email.com
+2025-05-19 13:01:09 INFO  c.s.r.i.component.JwtUtil - Token validated successfully for email: example@email.com
+2025-05-19 13:01:09 DEBUG c.s.r.i.component.JwtUtil - Extracting email from token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJleGFtcGxlQGVtYWlsLmNvbSIsImlhdCI6MTc0NzY0MTYyOSwiZXhwIjoxNzQ3NzI4MDI5fQ.QCSErmWTfZ_i81gd4Hz1WPHfEWCxTJSxS2z9eBDDIKBGw6dnMSJEAUguIF_zBecOC1kb0nAZo50fFkNmIru5rA
+2025-05-19 13:01:09 INFO  c.s.r.i.component.JwtUtil - Extracted email: example@email.com
+2025-05-19 13:01:09 INFO  c.s.r.i.c.JwtAuthenticationFilter - Valid token for email: example@email.com
+2025-05-19 13:01:09 DEBUG o.s.web.servlet.DispatcherServlet - GET "/rooms/4/users", parameters={}
+2025-05-19 13:01:09 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.soundspace.roomservice.api.controller.RoomController#getUsersInRoom(Long)
+2025-05-19 13:01:09 DEBUG feign.template.Template - Explicit slash decoding specified, decoding all slashes in uri
+2025-05-19 13:01:09 DEBUG o.s.w.c.HttpMessageConverterExtractor - Reading to [com.soundspace.roomservice.infrastructure.client.UserServiceClient$UserDTO]
+2025-05-19 13:01:09 DEBUG feign.template.Template - Explicit slash decoding specified, decoding all slashes in uri
+2025-05-19 13:01:09 DEBUG o.s.w.c.HttpMessageConverterExtractor - Reading to [com.soundspace.roomservice.infrastructure.client.UserServiceClient$UserDTO]
+2025-05-19 13:01:09 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-05-19 13:01:09 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[UserServiceClient.UserDTO(id=null, email=john.doe@email.com, name=John), UserServiceClient.UserDTO( (truncated)...]
+2025-05-19 13:01:09 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2025-05-19 13:01:24 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:01:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:01:24 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:01:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:01:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:01:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:01:24 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:01:54 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:01:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:01:54 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:01:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:01:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:01:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:01:54 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:02:24 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:02:24 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:02:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:02:24 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:02:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:02:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:02:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:02:24 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:02:54 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:02:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:02:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:02:54 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:02:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:02:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:02:54 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:03:24 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:03:24 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:03:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:03:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:03:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:03:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:03:24 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:03:54 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:03:54 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:03:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:03:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:03:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:03:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:03:54 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:04:24 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:04:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:04:24 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:04:24 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:04:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:04:24 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:04:24 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:04:54 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:04:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:04:54 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:04:54 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:04:54 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:04:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:04:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:05:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:05:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:05:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:05:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:05:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:05:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:05:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:05:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:05:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:05:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:05:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:05:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:05:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:05:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:06:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:06:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:06:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:06:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:06:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:06:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:06:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:06:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:06:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:06:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:06:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:06:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:06:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:06:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:07:24 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:07:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:07:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:07:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:07:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:07:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:07:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:07:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:07:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:07:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:07:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:07:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:07:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:07:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:07:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:08:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:08:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:08:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:08:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:08:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:08:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:08:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:08:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:08:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:08:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:08:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:08:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:08:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:08:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:09:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:09:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:09:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:09:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:09:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:09:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:09:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:09:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:09:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:09:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:09:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:09:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:09:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:09:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:10:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:10:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:10:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:10:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:10:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:10:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:10:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:10:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:10:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:10:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:10:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:10:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:10:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:10:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:11:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:11:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:11:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:11:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:11:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:11:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:11:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:11:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:11:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:11:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:11:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:11:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:11:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:11:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:12:24 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:12:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:12:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:12:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:12:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:12:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:12:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:12:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:12:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:12:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:12:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:12:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:12:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:12:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:12:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:13:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:13:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:13:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:13:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:13:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:13:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:13:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:13:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:13:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:13:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:13:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:13:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:13:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:13:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:14:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:14:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:14:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:14:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:14:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:14:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:14:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:14:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:14:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:14:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:14:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:14:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:14:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:14:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:15:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:15:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:15:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:15:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:15:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:15:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:15:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:15:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:15:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:15:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:15:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:15:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:15:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:15:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:16:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:16:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:16:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:16:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:16:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:16:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:16:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:16:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:16:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:16:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:16:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:16:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:16:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:16:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:17:23 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:17:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:17:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:17:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:17:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:17:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:17:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:17:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:17:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:17:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:17:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:17:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:17:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:17:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:17:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:18:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:18:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:18:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:18:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:18:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:18:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:18:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:18:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:18:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:18:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:18:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:18:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:18:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:18:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:19:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:19:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:19:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:19:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:19:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:19:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:19:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:19:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:19:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:19:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:19:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:19:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:19:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:19:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:20:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:20:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:20:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:20:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:20:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:20:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:20:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:20:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:20:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:20:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:20:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:20:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:20:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:20:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:21:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:21:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:21:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:21:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:21:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:21:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:21:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:21:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:21:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:21:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:21:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:21:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:21:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:21:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:22:23 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:22:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:22:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:22:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:22:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:22:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:22:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:22:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:22:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:22:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:22:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:22:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:22:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:22:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:22:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:23:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:23:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:23:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:23:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:23:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:23:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:23:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:23:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:23:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:23:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:23:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:23:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:23:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:23:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:24:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:24:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:24:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:24:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:24:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:24:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:24:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:24:55 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:24:55 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:24:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:24:55 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:24:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:24:55 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:24:55 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:25:25 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:25:25 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:25:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:25:25 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:25:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:25:25 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:25:25 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:25:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:25:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:25:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:25:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:25:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:25:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:25:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:26:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:26:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:26:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:26:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:26:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:26:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:26:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:26:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:26:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:26:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:26:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:26:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:26:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:26:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:27:23 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:27:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:27:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:27:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:27:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:27:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:27:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:27:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:27:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:27:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:27:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:27:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:27:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:27:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:27:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:28:23 INFO  o.s.w.s.c.WebSocketMessageBrokerStats - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 2, active threads = 1, queued tasks = 0, completed tasks = 1]
+2025-05-19 13:28:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:28:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:28:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:28:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:28:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:28:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:28:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:28:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:28:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:28:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:28:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:28:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:28:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:28:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:29:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:29:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:29:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:29:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:29:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:29:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:29:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:29:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:29:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:29:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:29:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:29:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:29:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:29:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:30:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:30:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:30:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:30:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:30:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:30:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:30:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:30:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:30:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:30:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:30:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:30:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:30:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:30:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:31:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:31:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:31:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:31:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:31:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:31:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:31:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:31:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:31:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:31:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:31:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:31:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:31:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:31:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:32:23 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:32:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:32:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:32:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:32:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:32:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:32:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:32:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:32:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:32:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:32:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:32:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:32:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:32:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:32:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:33:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:33:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:33:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:33:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:33:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:33:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:33:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:33:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:33:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:33:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:33:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:33:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:33:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:33:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:34:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:34:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:34:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:34:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:34:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:34:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:34:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:34:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:34:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:34:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:34:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:34:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:34:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:34:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:35:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:35:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:35:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:35:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:35:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:35:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:35:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:35:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:35:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:35:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:35:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:35:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:35:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:35:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:36:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:36:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:36:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:36:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:36:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:36:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:36:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:36:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:36:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:36:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:36:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:36:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:36:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:36:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:37:23 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:37:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:37:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:37:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:37:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:37:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:37:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:37:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:37:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:37:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:37:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:37:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:37:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:37:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:37:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:38:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:38:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:38:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:38:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:38:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:38:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:38:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:38:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:38:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:38:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:38:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:38:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:38:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:38:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:39:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:39:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:39:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:39:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:39:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:39:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:39:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:39:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:39:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:39:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:39:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:39:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:39:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:39:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:40:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:40:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:40:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:40:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:40:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:40:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:40:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:40:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:40:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:40:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:40:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:40:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:40:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:40:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:41:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:41:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:41:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:41:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:41:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:41:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:41:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:41:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:41:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:41:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:41:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:41:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:41:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:41:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:42:23 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:42:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:42:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:42:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:42:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:42:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:42:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:42:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:42:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:42:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:42:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:42:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:42:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:42:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:42:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:43:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:43:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:43:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:43:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:43:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:43:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:43:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:43:56 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:43:56 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:43:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:43:56 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:43:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:43:56 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:43:56 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:44:26 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:44:26 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:44:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:44:26 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:44:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:44:26 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:44:26 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:46:43 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:46:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:46:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:46:43 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:46:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:46:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:46:43 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:47:07 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m16s623ms592µs300ns).
+2025-05-19 13:47:13 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:47:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:47:13 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:47:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:47:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:47:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:47:13 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:47:43 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:47:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:47:43 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:47:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:47:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:47:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:47:43 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:48:13 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:48:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:48:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:48:13 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:48:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:48:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:48:13 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:48:43 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:48:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:48:43 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:48:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:48:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:48:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:48:43 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:49:10 INFO  c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2025-05-19 13:49:13 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:49:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:49:13 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:49:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:49:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:49:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:49:13 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:49:43 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:49:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:49:43 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:49:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:49:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:49:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:49:43 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:50:13 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:50:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:50:13 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:50:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:50:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:50:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:50:13 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:50:43 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:50:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:50:43 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:50:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:50:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:50:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:50:43 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:51:13 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:51:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:51:13 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:51:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:51:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:51:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:51:13 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:51:43 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:51:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:51:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:51:43 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:51:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:51:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:51:43 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:52:13 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:52:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:52:13 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:52:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:52:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:52:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:52:13 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:52:43 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:52:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:52:43 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:52:43 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:52:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:52:43 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:52:43 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:53:13 DEBUG o.s.web.client.RestTemplate - HTTP PUT http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082?status=UP&lastDirtyTimestamp=1747641444591
+2025-05-19 13:53:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:53:13 DEBUG o.s.web.client.RestTemplate - HTTP GET http://localhost:8761/eureka/apps/delta
+2025-05-19 13:53:13 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:53:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:53:13 DEBUG o.s.web.client.RestTemplate - Response 200 OK
+2025-05-19 13:53:13 DEBUG o.s.web.client.RestTemplate - Reading to [org.springframework.cloud.netflix.eureka.http.EurekaApplications]
+2025-05-19 13:54:32 INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application ROOM-SERVICE with eureka with status DOWN
+2025-05-19 13:54:32 INFO  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1747644872674, current=DOWN, previous=UP]
+2025-05-19 13:54:32 DEBUG org.springframework.web.SimpLogging - clientOutboundChannel removed SubProtocolWebSocketHandler[StompSubProtocolHandler[v10.stomp, v11.stomp, v12.stomp]]
+2025-05-19 13:54:32 DEBUG org.springframework.web.SimpLogging - clientInboundChannel removed WebSocketAnnotationMethodMessageHandler[prefixes=[/app/]]
+2025-05-19 13:54:32 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-05-19 13:54:32 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@f2bec99]]
+2025-05-19 13:54:32 DEBUG org.springframework.web.SimpLogging - clientInboundChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@f2bec99]
+2025-05-19 13:54:32 DEBUG org.springframework.web.SimpLogging - brokerChannel removed SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@f2bec99]
+2025-05-19 13:54:32 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-05-19 13:54:32 DEBUG org.springframework.web.SimpLogging - clientInboundChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-05-19 13:54:32 DEBUG org.springframework.web.SimpLogging - brokerChannel removed UserDestinationMessageHandler[DefaultUserDestinationResolver[prefix=/user/]]
+2025-05-19 13:54:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-19 13:54:32 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-05-19 13:54:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-05-19 13:54:33 INFO  c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2025-05-19 13:54:33 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082: registering service...
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/ROOM-SERVICE
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = LAPTOP-NSKOCGRU:room-service:8082, appName = ROOM-SERVICE, hostName = LAPTOP-NSKOCGRU, status = DOWN, ipAddr = 192.168.0.11, port = 8082, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@14d44e72] as "application/json"
+2025-05-19 13:54:33 INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/ROOM-SERVICE": Connection reset stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/ROOM-SERVICE": Connection reset
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:885)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:247)
+	at org.apache.hc.core5.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:54)
+	at org.apache.hc.core5.http.impl.io.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:299)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:175)
+	at org.apache.hc.core5.http.impl.io.HttpRequestExecutor.execute(HttpRequestExecutor.java:218)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager$InternalConnectionEndpoint.execute(PoolingHttpClientConnectionManager.java:712)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.execute(InternalExecRuntime.java:216)
+	at org.apache.hc.client5.http.impl.classic.MainClientExec.execute(MainClientExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:188)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:101)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:87)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	... 20 more
+
+2025-05-19 13:54:33 WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/ROOM-SERVICE": Connection reset
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/ROOM-SERVICE
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = LAPTOP-NSKOCGRU:room-service:8082, appName = ROOM-SERVICE, hostName = LAPTOP-NSKOCGRU, status = DOWN, ipAddr = 192.168.0.11, port = 8082, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@14d44e72] as "application/json"
+2025-05-19 13:54:33 INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/ROOM-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/ROOM-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:885)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:85)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:113)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:181)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:101)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:87)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	... 21 more
+
+2025-05-19 13:54:33 WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/ROOM-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-05-19 13:54:33 WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-05-19 13:54:33 WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-05-19 13:54:33 INFO  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082: registering service...
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - HTTP POST http://localhost:8761/eureka/apps/ROOM-SERVICE
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - Writing [InstanceInfo [instanceId = LAPTOP-NSKOCGRU:room-service:8082, appName = ROOM-SERVICE, hostName = LAPTOP-NSKOCGRU, status = DOWN, ipAddr = 192.168.0.11, port = 8082, securePort = 443, dataCenterInfo = com.netflix.appinfo.MyDataCenterInfo@14d44e72] as "application/json"
+2025-05-19 13:54:33 INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/ROOM-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/ROOM-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:885)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:85)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:113)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:181)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:101)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:87)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	... 22 more
+
+2025-05-19 13:54:33 WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/ROOM-SERVICE": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-05-19 13:54:33 WARN  c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-05-19 13:54:33 WARN  c.n.discovery.InstanceInfoReplicator - There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:820)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at com.netflix.discovery.InstanceInfoReplicator$1.run(InstanceInfoReplicator.java:101)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-05-19 13:54:33 INFO  c.netflix.discovery.DiscoveryClient - Unregistering ...
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - HTTP DELETE http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082
+2025-05-19 13:54:33 DEBUG o.s.web.client.RestTemplate - Accept=[application/json, application/*+json]
+2025-05-19 13:54:33 INFO  c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:905)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:885)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:781)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:663)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1086)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:547)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:85)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:84)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:113)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:181)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:447)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:96)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:115)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:95)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:101)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$0(RestTemplateTransportClientFactory.java:143)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:87)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:71)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:879)
+	... 40 more
+
+2025-05-19 13:54:33 WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082": Connect to http://localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: getsockopt
+2025-05-19 13:54:33 ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_ROOM-SERVICE/LAPTOP-NSKOCGRU:room-service:8082 - de-registration failedCannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:916)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:892)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1200)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1193)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1125)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1086)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1037)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-05-19 13:54:33 INFO  c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient
