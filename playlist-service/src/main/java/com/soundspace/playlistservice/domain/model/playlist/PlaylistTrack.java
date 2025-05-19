@@ -1,8 +1,7 @@
-package com.soundspace.playlistservice.domain.model;
+package com.soundspace.playlistservice.domain.model.playlist;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity

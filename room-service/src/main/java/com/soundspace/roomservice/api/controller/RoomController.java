@@ -84,18 +84,18 @@ public class RoomController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("/{id}/votes")
-    @Operation(summary = "Vote for a track", description = "Allows a user to vote for a track")
-    @ApiResponse(responseCode = "200", description = "Vote recorded")
-    public ResponseEntity<Vote> vote(@PathVariable Long id,
-                                     @Valid @RequestBody VoteDTO voteDTO,
-                                     @RequestHeader("Authorization") String authHeader) {
-        String token = authHeader.substring(7);
-        String email = jwtUtil.getEmailFromToken(token);
-        Long userId = getUserIdByEmail(email);
-        Vote vote = roomService.vote(id, userId, voteDTO.getTrackId());
-        return ResponseEntity.ok(vote);
-    }
+//    @PostMapping("/{id}/votes")
+//    @Operation(summary = "Vote for a track", description = "Allows a user to vote for a track")
+//    @ApiResponse(responseCode = "200", description = "Vote recorded")
+//    public ResponseEntity<Vote> vote(@PathVariable Long id,
+//                                     @Valid @RequestBody VoteDTO voteDTO,
+//                                     @RequestHeader("Authorization") String authHeader) {
+//        String token = authHeader.substring(7);
+//        String email = jwtUtil.getEmailFromToken(token);
+//        Long userId = getUserIdByEmail(email);
+//        Vote vote = roomService.vote(id, userId, voteDTO.getTrackId());
+//        return ResponseEntity.ok(vote);
+//    }
 
     @GetMapping("/{id}/state")
     @Operation(summary = "Get playback state", description = "Retrieves the current playback state")

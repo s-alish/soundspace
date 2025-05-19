@@ -81,49 +81,55 @@ public class RoomService {
         roomUserRepository.save(roomUser);
     }
 
-    public Vote vote(Long roomId, Long userId, Long trackId) {
-        if (!roomRepository.existsById(roomId)) {
-            throw new RuntimeException("Room not found");
-        }
-        if (!roomUserRepository.existsByRoomIdAndUserId(roomId, userId)) {
-            throw new RuntimeException("User not in room");
-        }
+//    public Vote vote(Long roomId, Long userId, Long trackId) {
+//        if (!roomRepository.existsById(roomId)) {
+//            throw new RuntimeException("Room not found");
+//        }
+//        if (!roomUserRepository.existsByRoomIdAndUserId(roomId, userId)) {
+//            throw new RuntimeException("User not in room");
+//        }
+//
+//        Vote vote = new Vote();
+//        vote.setRoomId(roomId);
+//        vote.setUserId(userId);
+//        vote.setTrackId(trackId);
+//        Vote savedVote = voteRepository.save(vote);
+//
+//        // Уведомление через WebSocket
+//        messagingTemplate.convertAndSend("/topic/rooms/" + roomId + "/votes", savedVote);
+//
+//        // Выбор следующего трека
+//        List<Vote> votes = voteRepository.findByRoomId(roomId);
+//        Long nextTrackId = voteStrategy.selectNextTrack(votes);
+//        if (nextTrackId != null) {
+//            updatePlaybackState(roomId, nextTrackId);
+//        }
+//
+//        return savedVote;
+//    }
+//
+//    private void updatePlaybackState(Long roomId, Long trackId) {
+//        PlaybackState playbackState = playbackStateRepository.findByRoomId(roomId)
+//                .orElseThrow(() -> new RuntimeException("Playback state not found"));
+//        PlaybackStateContext context = new PlaybackStateContext();
+//        context.play(trackId);
+//        playbackState.setState(context.getCurrentState());
+//        playbackState.setCurrentTrackId(context.getCurrentTrackId());
+//        playbackStateRepository.save(playbackState);
+//
+//        // Уведомление через WebSocket
+//        messagingTemplate.convertAndSend("/topic/rooms/" + roomId + "/state", playbackState);
+//    }
+//
+//    public PlaybackState getPlaybackState(Long roomId) {
+//        return playbackStateRepository.findByRoomId(roomId)
+//                .orElseThrow(() -> new RoomNotFoundException(roomId));
+//    }
 
-        Vote vote = new Vote();
-        vote.setRoomId(roomId);
-        vote.setUserId(userId);
-        vote.setTrackId(trackId);
-        Vote savedVote = voteRepository.save(vote);
-
-        // Уведомление через WebSocket
-        messagingTemplate.convertAndSend("/topic/rooms/" + roomId + "/votes", savedVote);
-
-        // Выбор следующего трека
-        List<Vote> votes = voteRepository.findByRoomId(roomId);
-        Long nextTrackId = voteStrategy.selectNextTrack(votes);
-        if (nextTrackId != null) {
-            updatePlaybackState(roomId, nextTrackId);
-        }
-
-        return savedVote;
-    }
-
-    private void updatePlaybackState(Long roomId, Long trackId) {
-        PlaybackState playbackState = playbackStateRepository.findByRoomId(roomId)
-                .orElseThrow(() -> new RuntimeException("Playback state not found"));
-        PlaybackStateContext context = new PlaybackStateContext();
-        context.play(trackId);
-        playbackState.setState(context.getCurrentState());
-        playbackState.setCurrentTrackId(context.getCurrentTrackId());
-        playbackStateRepository.save(playbackState);
-
-        // Уведомление через WebSocket
-        messagingTemplate.convertAndSend("/topic/rooms/" + roomId + "/state", playbackState);
-    }
-
-    public PlaybackState getPlaybackState(Long roomId) {
-        return playbackStateRepository.findByRoomId(roomId)
-                .orElseThrow(() -> new RoomNotFoundException(roomId));
+    public PlaybackState getPlaybackState(Long id) {
+        logger.info("Fetching playback state for room {}", id);
+        PlaybackState state = new PlaybackState();
+        return state;
     }
 
     public List<UserServiceClient.UserDTO> getUsersInRoom(Long roomId) {
