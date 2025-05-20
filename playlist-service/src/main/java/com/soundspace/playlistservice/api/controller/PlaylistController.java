@@ -1,5 +1,6 @@
 package com.soundspace.playlistservice.api.controller;
 
+import com.soundspace.playlistservice.api.dto.QueueTrackRequestDTO;
 import com.soundspace.playlistservice.api.dto.TrackDTO;
 import com.soundspace.playlistservice.api.dto.TrackMapper;
 import com.soundspace.playlistservice.application.service.PlaylistService;
@@ -7,7 +8,6 @@ import com.soundspace.playlistservice.domain.model.playlist.Track;
 import com.soundspace.playlistservice.infrastructure.client.UserServiceClient;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,17 +58,16 @@ public class PlaylistController {
     }
 
     @PostMapping("/queue")
-    @Operation(summary = "Add a track to a room's queue", description = "Adds a new track to the queue.")
+    @Operation(summary = "Add a track to a room's queue", description = "Adds an existing playlist track to the queue.")
     @ApiResponse(responseCode = "200", description = "Track added successfully")
     public ResponseEntity<TrackDTO> addTrackToQueue(
             @PathVariable Long roomId,
-            @RequestBody TrackDTO trackDTO) {
+            @RequestBody QueueTrackRequestDTO requestDTO) {
         String email = SecurityContextHolder.getContext().getAuthentication().getName();
         Long userId = getUserIdByEmail(email);
-        logger.info("Request to add track to queue for room {} by user {}", roomId, userId);
+        logger.info("Request to add track to queue for room {} by user {}, trackId {}", roomId, userId, requestDTO.getTrackId());
 
-        Track track = TrackMapper.toEntity(trackDTO);
-        Track savedTrack = playlistService.addTrackToQueue(roomId, userId, track);
+        Track savedTrack = playlistService.addTrackToQueue(roomId, userId, requestDTO.getTrackId());
         return ResponseEntity.ok(TrackMapper.toDTO(savedTrack));
     }
 

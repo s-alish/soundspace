@@ -22,7 +22,6 @@ import com.soundspace.playlistservice.infrastructure.client.UserServiceClient;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -83,9 +82,18 @@ public class PlaylistService {
     }
 
     @Transactional
-    public Track addTrackToQueue(Long roomId, Long userId, Track track) {
-        logger.info("Adding track to queue: roomId={}, userId={}, trackTitle={}", roomId, userId, track.getTitle());
+    public Track addTrackToQueue(Long roomId, Long userId, Long trackId) {
+        logger.info("Adding track to queue: roomId={}, userId={}, trackId={}", roomId, userId, trackId);
         validateUserAndRoom(userId, roomId);
+
+        // Validate that the track exists in the room's playlist
+        Playlist playlist = playlistRepository.findByRoomId(roomId)
+                .orElseThrow(() -> new RuntimeException("Playlist not found for room"));
+        Track track = playlistTrackRepository.findByPlaylistId(playlist.getId()).stream()
+                .map(PlaylistTrack::getTrack)
+                .filter(t -> t.getId().equals(trackId))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("Track with ID " + trackId + " not found in playlist for room " + roomId));
 
         Queue queue = queueRepository.findByRoomId(roomId)
                 .orElseGet(() -> {
@@ -94,16 +102,15 @@ public class PlaylistService {
                     return queueRepository.save(newQueue);
                 });
 
-        Track savedTrack = trackRepository.save(track);
         List<QueueTrack> existingTracks = queueTrackRepository.findByQueueIdOrderByPositionAsc(queue.getId());
         int nextPosition = existingTracks.isEmpty() ? 0 : existingTracks.get(existingTracks.size() - 1).getPosition() + 1;
 
         QueueTrack queueTrack = new QueueTrack();
         queueTrack.setQueue(queue);
-        queueTrack.setTrack(savedTrack);
+        queueTrack.setTrack(track);
         queueTrack.setPosition(nextPosition);
         queueTrackRepository.save(queueTrack);
-        return savedTrack;
+        return track;
     }
 
     @Transactional
@@ -142,8 +149,8 @@ public class PlaylistService {
     }
 
     @Transactional
-    public void proposeTrack(Long roomId, Long userId) {
-        logger.info("Proposing track for room {} by user {}", roomId, userId);
+    public void proposeTrack(Long roomId, Long userId, Long trackId) {
+        logger.info("Proposing track for room {} by user {}, trackId {}", roomId, userId, trackId);
         validateUserAndRoom(userId, roomId);
 
         if (voteProposalRepository.findByRoomIdAndStatus(roomId, VoteProposal.Status.PENDING).isPresent()) {
@@ -152,13 +159,13 @@ public class PlaylistService {
         }
 
         List<Track> availableTracks = getAvailableTracks(roomId);
-        if (availableTracks.isEmpty()) {
-            logger.warn("No available tracks to propose for room {}", roomId);
-            throw new RuntimeException("No tracks available to propose");
-        }
-
-        Collections.shuffle(availableTracks);
-        Track proposedTrack = availableTracks.get(0);
+        Track proposedTrack = availableTracks.stream()
+                .filter(t -> t.getId().equals(trackId))
+                .findFirst()
+                .orElseThrow(() -> {
+                    logger.warn("Track {} is not available for proposal in room {}", trackId, roomId);
+                    return new RuntimeException("Track not available for proposal");
+                });
 
         VoteProposal proposal = new VoteProposal();
         proposal.setRoomId(roomId);
@@ -186,6 +193,11 @@ public class PlaylistService {
                     return new RuntimeException("Invalid or inactive proposal");
                 });
 
+        if (voteRepository.findByProposalIdAndUserId(proposalId, userId) != null) {
+            logger.warn("User {} has already voted for proposal {} in room {}", userId, proposalId, roomId);
+            throw new RuntimeException("User has already voted for this proposal");
+        }
+
         Vote vote = new Vote();
         vote.setProposal(proposal);
         vote.setUserId(userId);
@@ -201,7 +213,7 @@ public class PlaylistService {
         List<VoteProposal> pendingProposals = voteProposalRepository.findAll().stream()
                 .filter(p -> p.getStatus() == VoteProposal.Status.PENDING)
                 .filter(p -> p.getProposedAt().isBefore(LocalDateTime.now().minusSeconds(30)))
-                .toList();
+                .collect(Collectors.toList());
 
         for (VoteProposal proposal : pendingProposals) {
             List<Vote> votes = voteRepository.findByProposalId(proposal.getId());
@@ -210,7 +222,7 @@ public class PlaylistService {
 
             if (playVotes >= skipVotes) {
                 proposal.setStatus(VoteProposal.Status.ACCEPTED);
-                addTrackToQueue(proposal.getRoomId(), null, proposal.getTrack());
+                addTrackToQueue(proposal.getRoomId(), null, proposal.getTrack().getId());
                 logger.info("Proposal {} accepted for room {}, track {} added to queue", proposal.getId(), proposal.getRoomId(), proposal.getTrack().getId());
                 messagingTemplate.convertAndSend(
                         "/room/" + proposal.getRoomId() + "/vote-result",
@@ -223,7 +235,7 @@ public class PlaylistService {
                         "/room/" + proposal.getRoomId() + "/vote-result",
                         new VoteResultMessage(proposal.getTrack().getId(), proposal.getTrack().getTitle(), false)
                 );
-                proposeTrack(proposal.getRoomId(), null);
+                proposeTrack(proposal.getRoomId(), null, null);
             }
             voteProposalRepository.save(proposal);
         }
@@ -235,7 +247,7 @@ public class PlaylistService {
 
         List<Long> queuedTrackIds = queueTrackRepository.findByQueueIdOrderByPositionAsc(
                 queueRepository.findByRoomId(roomId).map(Queue::getId).orElse(0L)
-        ).stream().map(qt -> qt.getTrack().getId()).toList();
+        ).stream().map(qt -> qt.getTrack().getId()).collect(Collectors.toList());
 
         List<Long> votedTrackIds = voteProposalRepository.findVotedTrackIdsByRoomId(roomId);
 

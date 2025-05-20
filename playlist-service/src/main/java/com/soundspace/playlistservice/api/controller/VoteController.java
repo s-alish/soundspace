@@ -1,5 +1,6 @@
 package com.soundspace.playlistservice.api.controller;
 
+import com.soundspace.playlistservice.api.dto.ProposeTrackRequestDTO;
 import com.soundspace.playlistservice.application.service.PlaylistService;
 import com.soundspace.playlistservice.domain.model.vote.Vote;
 import com.soundspace.playlistservice.infrastructure.client.UserServiceClient;
@@ -24,11 +25,14 @@ public class VoteController {
     @PostMapping("/propose")
     @Operation(summary = "Propose a track for voting", description = "Proposes a random track for voting.")
     @ApiResponse(responseCode = "200", description = "Track proposed successfully")
-    public ResponseEntity<Void> proposeTrack(@PathVariable Long roomId) {
+    public ResponseEntity<Void> proposeTrack(
+            @PathVariable Long roomId,
+            @RequestBody ProposeTrackRequestDTO requestDTO) {
         String email = SecurityContextHolder.getContext().getAuthentication().getName();
         Long userId = getUserIdByEmail(email);
-        logger.info("Request to propose track for room {} by user {}", roomId, userId);
-        playlistService.proposeTrack(roomId, userId);
+        logger.info("Request to propose track for room {} by user {}, trackId {}", roomId, userId, requestDTO.getTrackId());
+
+        playlistService.proposeTrack(roomId, userId, requestDTO.getTrackId());
         return ResponseEntity.ok().build();
     }
 
