@@ -1,6 +1,7 @@
 package com.soundspace.playlistservice.application.service;
 
 
+import com.soundspace.playlistservice.api.controller.VoteNotificationController;
 import com.soundspace.playlistservice.api.dto.VoteProposalMessage;
 import com.soundspace.playlistservice.api.dto.VoteResultMessage;
 import com.soundspace.playlistservice.domain.model.playlist.Playlist;
@@ -22,7 +23,7 @@ import com.soundspace.playlistservice.infrastructure.client.UserServiceClient;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
+//import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,6 +32,7 @@ import java.time.LocalDateTime;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+
 
 @Service
 @RequiredArgsConstructor
@@ -47,7 +49,7 @@ public class PlaylistService {
     private final VoteRepository voteRepository;
     private final RoomServiceClient roomServiceClient;
     private final UserServiceClient userServiceClient;
-    private final SimpMessagingTemplate messagingTemplate;
+    private final VoteNotificationController notificationController;
 
     @Transactional
     public Track addTrackToPlaylist(Long roomId, Long userId, Track track) {
@@ -86,7 +88,6 @@ public class PlaylistService {
         logger.info("Adding track to queue: roomId={}, userId={}, trackId={}", roomId, userId, trackId);
         validateUserAndRoom(userId, roomId);
 
-        // Validate that the track exists in the room's playlist
         Playlist playlist = playlistRepository.findByRoomId(roomId)
                 .orElseThrow(() -> new RuntimeException("Playlist not found for room"));
         Track track = playlistTrackRepository.findByPlaylistId(playlist.getId()).stream()
@@ -174,8 +175,8 @@ public class PlaylistService {
         proposal.setProposedAt(LocalDateTime.now());
         voteProposalRepository.save(proposal);
 
-        messagingTemplate.convertAndSend(
-                "/room/" + roomId + "/vote",
+        notificationController.sendVoteProposal(
+                roomId,
                 new VoteProposalMessage(proposedTrack.getId(), proposedTrack.getTitle(), proposedTrack.getArtist(), proposal.getId())
         );
         logger.info("Proposed track {} for room {}", proposedTrack.getId(), roomId);
@@ -224,18 +225,18 @@ public class PlaylistService {
                 proposal.setStatus(VoteProposal.Status.ACCEPTED);
                 addTrackToQueue(proposal.getRoomId(), null, proposal.getTrack().getId());
                 logger.info("Proposal {} accepted for room {}, track {} added to queue", proposal.getId(), proposal.getRoomId(), proposal.getTrack().getId());
-                messagingTemplate.convertAndSend(
-                        "/room/" + proposal.getRoomId() + "/vote-result",
+                notificationController.sendVoteResult(
+                        proposal.getRoomId(),
                         new VoteResultMessage(proposal.getTrack().getId(), proposal.getTrack().getTitle(), true)
                 );
             } else {
                 proposal.setStatus(VoteProposal.Status.REJECTED);
-                logger.info("Proposal {} rejected for room {}, proposing new track", proposal.getId(), proposal.getRoomId());
-                messagingTemplate.convertAndSend(
-                        "/room/" + proposal.getRoomId() + "/vote-result",
+                logger.info("Proposal {} rejected for room {}, no new track proposed", proposal.getId(), proposal.getRoomId());
+                notificationController.sendVoteResult(
+                        proposal.getRoomId(),
                         new VoteResultMessage(proposal.getTrack().getId(), proposal.getTrack().getTitle(), false)
                 );
-                proposeTrack(proposal.getRoomId(), null, null);
+                // Removed automatic re-proposal to align with user-specified trackId
             }
             voteProposalRepository.save(proposal);
         }
